@@ -3,75 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Flexbox Dashboard</title>
+    <title>Activity 3</title>
     <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
+        body{
+            font-family: monospace;
         }
-        .container {
-            display: flex;
-            flex-direction: column;
-            height: 100vh;
-        }
-        .header {
-            background-color: #333;
-            color: white;
-            padding: 10px;
+        h1{
             text-align: center;
         }
-        .main {
-            display: flex;
-            flex: 1;
-            flex-direction: row;
+        .grid-container{
+            display: grid;
+            grid-template-rows: repeat(3, 300px);
+            grid-template-columns: repeat(3, 300px);
+            justify-content: center;
         }
-        .sidebar {
-            background-color: #f4f4f4;
+        .grid-item img{
+            border-radius: 10px 10px 0 0;
+            object-fit: cover;
+            height: 200px;
             width: 200px;
-            padding: 10px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+            border-bottom: 2px black solid;
         }
-        .content {
-            flex: 1;
-            padding: 10px;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-        .card {
-            background-color: #ddd;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            padding: 10px;
-            flex: 1 1 200px; 
-        }
-        .footer {
-            background-color: #333;
-            color: white;
-            padding: 10px;
+        .grid-item p{
             text-align: center;
+            color: white;
+        }
+        .grid-item .card{
+            background-color: grey;
+            width: fit-content;
+            border-radius: 10px;
+            padding-bottom: 10px;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">Dashboard Header</div>
-        <div class="main">
-            <div class="sidebar">
-                <div>Menu Item 1</div>
-                <div>Menu Item 2</div>
-                <div>Menu Item 3</div>
-            </div>
-            <div class="content">
-                <div class="card">Card 1</div>
-                <div class="card">Card 2</div>
-                <div class="card">Card 3</div>
-                <div class="card">Card 4</div>
+    <h1>Christian James Santos' favorite dishes:</h1>
+    <div class="grid-container">
+        <div class="grid-item">
+            <div class="card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Chicken_adobo.jpg/1280px-Chicken_adobo.jpg" alt="dish1">
+                <p>Adobo</p>
             </div>
         </div>
-        <div class="footer">Dashboard Footer</div>
+        <div class="grid-item">
+            <div class="card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/06654jfCandaba%2C_Pampanga_Market_Fishes_Foods_Landmarksfvf_27.jpg/1280px-06654jfCandaba%2C_Pampanga_Market_Fishes_Foods_Landmarksfvf_27.jpg" alt="dish2">
+                <p>Barbeque</p>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Rellenong_talong.jpg/1280px-Rellenong_talong.jpg" alt="dish3">
+                <p>Tortang Talong</p>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/BULALO.jpg/1280px-BULALO.jpg" alt="dish4">
+                <p>Bulalo</p>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Sinigang_na_baboy.jpg/800px-Sinigang_na_baboy.jpg" alt="dish5">
+                <p>Sinigang</p>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Tinolalunch.jpg/1920px-Tinolalunch.jpg" alt="dish6">
+                <p>Tinola</p>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Pancit_lomi.jpg/1280px-Pancit_lomi.jpg" alt="dish7">
+                <p>Lomi</p>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Home_-_Dinner.jpg/1280px-Home_-_Dinner.jpg" alt="dish8">
+                <p>Lugaw</p>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/1/10/Tinapa_%28Orion%2C_Bataan%29_%281309812880%29.jpg" alt="dish9">
+                <p>Tuyo</p>
+            </div>
+        </div>
     </div>
 </body>
 </html>
